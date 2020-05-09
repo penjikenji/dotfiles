@@ -1,0 +1,67 @@
+{
+    "layer": "top",
+    "modules-left": ["sway/workspaces", "sway/mode", "tray"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio","network", "battery"],
+    
+
+    "battery": {
+         "states": {
+            "warning": 20,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 60
+    },
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:%D}"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "network": {
+        "interval": "{60}",
+        "format-wifi": "{essid} ",
+        "format-ethernet": "{essid} ",
+        "format-disconnected": "Disconnected",
+        "tooltip-format": "{ifname}",
+        "max-length": 50,
+        "on-click": "nm-connection-editor"
+    },
+    "tray":{
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "sway/workspaces": {
+        "all-outputs": true,
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        },
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": ""
+            
+        }    
+    }
+}
