@@ -1,0 +1,19 @@
+# Global configuration options
+max-visible=3
+layer=overlay
+anchor=top-right
+
+# Style options
+font=Cozette 11
+background-color=#1d2021
+text-color=#ebdbb2
+width=400
+height=40
+border-size=0
+border-color=#E8D6AD
+progress-color=#E8D6AD
+icons=1
+max-icon-size=64
+actions=1
+default-timeout=5000
+history=0

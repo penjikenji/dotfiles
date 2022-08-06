@@ -1,0 +1,88 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: CozetteVector, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    min-height: 0;
+    margin: 0 3px;
+    padding: 0px 0px 0px 0px;
+}
+
+window#waybar {
+    background: #282828;
+    color: #ebdbb2;
+}
+
+#custom-workspacetext, #custom-timetext,
+#pulseaudio.volumestatus, #custom-powertext {
+    background: #8ec07c;
+    color: #282828;
+    margin: 5px 3px 5px 15px;
+    padding: 0 5px;
+
+}
+
+#workspaces button {
+    margin: 5px 10px;
+    background: #436644;
+    color: #282828;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background-color: #436644;
+    color: #282828;
+}
+
+#workspaces button.focused {
+    background: #8ec07c;
+    color: #282828;
+}
+
+#battery.chargingstatus{
+    background-color: #696913;
+    color: #282828;
+    margin: 5px 3px 5px 5px;
+    padding: 0 5px;
+}
+
+#battery.lowstatus {
+    background-color: #5c0f0c;
+    color: #282828;
+    margin: 5px 15px 5px 5px;
+    padding: 0 5px;
+}
+
+#battery.lowstatus.critical:not(.charging) {
+    background: #fb4934;
+}
+#battery.chargingstatus.charging {
+    background-color: #b8bb26;
+}
+#network.wifistatus, #network.ethstatus {
+    background-color: #436644;
+    color: #282828;
+    margin: 5px 3px 5px 5px;
+    padding: 0 5px;
+}
+
+#network.wifistatus.wifi {
+    background-color: #8ec07c;
+}
+
+#network.ethstatus.ethernet {
+    background-color: #8ec07c;
+}
+
+#pulseaudio.volumestatus.muted {
+    background-color: #436644;
+}
+
+#custom-spotify {
+    padding: 0px 0px 5px 10px;
+}
+
+#custom-version { 
+    padding: 0px 10px 5px 0px;
+}

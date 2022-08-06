@@ -1,0 +1,84 @@
+[{
+    "layer": "top",
+    "modules-left": ["sway/workspaces", "tray"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/networktext", "network#wifistatus", "network#ethstatus", 
+                        "pulseaudio#volumestatus", "pulseaudio", "custom/powertext", 
+                        "battery", "battery#chargingstatus", "battery#lowstatus"],
+    "sway/window": {
+        "max-length": 50
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+    "battery": {
+        "format": "{capacity}",
+        "interval": 30
+    },
+    "battery#chargingstatus": {
+        "format": "CHARGING",
+        "interval": 30
+    },
+    "battery#lowstatus": {
+        "states": {
+            "critical": 15
+        },
+        "format": "LOW",
+        "interval": 30
+    },
+    "clock": {
+        "format": "{:%D | %I:%M %p}"
+    },
+    "pulseaudio": {
+        "format": "{volume}"
+    },
+    "network#wifistatus": {
+        "interval": 30,
+        "format": "WIFI"
+    },
+    "network#ethstatus": {
+        "interval": 30,
+        "format": "ETH"
+    },
+    "sway/workspaces": {
+        "format": "{name}",
+        "all-outputs" : true,
+        "diable-scroll": true,
+        "peristent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+    "custom/timetext": {
+        "format": "TIME",
+        "format-alt": "DATE"
+    },
+    "pulseaudio#volumestatus": {
+        "format": "VOLUME"
+    },
+    "custom/powertext": {
+        "format": "POWER"
+    }
+},
+
+{
+    "layer": "top",
+    "position": "bottom",
+    "modules-left": ["custom/spotify"],
+    "modules-right": ["custom/version"],
+    "sway/window": {
+        "max-length": 50
+    },
+    "custom/spotify": {
+        "format": " {}",
+        "return-type": "json",
+        "exec-if": "pgrep spotify",
+        "exec": "python3 $HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null"
+    },
+    "custom/version": {
+        "format": " {}",
+        "exec": "cat /etc/fedora-release"
+    }
+}]
